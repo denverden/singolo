@@ -1,27 +1,27 @@
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
 /*# sourceMappingURL=normalize.min.css.map */
 @font-face {
-  font-family: 'Lato';
-  src: local("Lato Light"), local("Lato-Light"), url("assets/fonts/latolight.woff2") format("woff2"), url("assets/fonts/latolight.woff") format("woff"), url("assets/fonts/latolight.ttf") format("truetype");
-  font-weight: 300;
+  font-family: "Lato-Regular";
+  src: url("./assets/fonts/Lato-Regular.ttf") format("truetype"), url("./assets/fonts/Lato-Regular.woff") format("woff"), url("./assets/fonts/Lato-Regular.woff2") format("woff2");
+  font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: 'Lato';
-  src: local("Lato Regular"), local("Lato-Regular"), url("assets/fonts/latoregular.woff2") format("woff2"), url("assets/fonts/latoregular.woff") format("woff"), url("assets/fonts/latoregular.ttf") format("truetype");
-  font-weight: 400;
+  font-family: "Lato-Bold";
+  src: url("./assets/fonts/Lato-Bold.ttf") format("truetype"), url("./assets/fonts/Lato-Bold.woff") format("woff"), url("./assets/fonts/Lato-Bold.woff2") format("woff2");
+  font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: 'Lato';
-  src: local("Lato Bold"), local("Lato-Bold"), url("assets/fonts/latobold.woff2") format("woff2"), url("assets/fonts/latobold.woff") format("woff"), url("assets/fonts/latobold.ttf") format("truetype");
-  font-weight: 700;
+  font-family: "Lato-Black";
+  src: url("./assets/fonts/Lato-Black.ttf") format("truetype"), url("./assets/fonts/Lato-Black.woff") format("woff"), url("./assets/fonts/Lato-Black.woff2") format("woff2");
+  font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: 'Lato';
-  src: local("Lato Black"), local("Lato-Black"), url("assets/fonts/latoblack.woff2") format("woff2"), url("assets/fonts/latoblack.woff") format("woff"), url("assets/fonts/latoblack.ttf") format("truetype");
-  font-weight: 900;
+  font-family: "Lato-Light";
+  src: url("./assets/fonts/Lato-Light.ttf") format("truetype"), url("./assets/fonts/Lato-Light.woff") format("woff"), url("./assets/fonts/Lato-Light.woff2") format("woff2");
+  font-weight: normal;
   font-style: normal; }
 
 .page {
@@ -302,18 +302,19 @@
   border-bottom: 6px solid #fff;
   padding: 40px 40px 29px 40px; }
   .services__header {
+    font-family: "Lato-Black", sans-serif;
     font-weight: 900;
     color: #666d89;
     margin-top: 20px;
     margin-bottom: 19px;
-    font-size: 30px; }
+    font-size: 30px;
+    letter-spacing: -0.005em; }
   .services__descr {
+    font-family: "Lato-Light", sans-serif;
     font-weight: 300;
     color: #767e9e;
     font-size: 18px;
     line-height: 1.7em;
-    letter-spacing: -0.02em;
-    word-spacing: 0.06em;
     text-align: justify; }
   .services__content {
     display: -webkit-box;
@@ -352,6 +353,7 @@
   .services-box__icon {
     padding-right: 20px; }
   .services-box__header {
+    font-family: "Lato-Black", sans-serif;
     font-weight: 900;
     color: #666d89;
     margin: -2px 0 9px -1px;
@@ -360,14 +362,11 @@
     word-spacing: -0.02em; }
     .services-box__header--left {
       margin-left: 1px; }
-    .services-box__header--word {
-      word-spacing: -0.08em; }
-    .services-box__header--word0 {
-      word-spacing: 0; }
   .services-box__descr {
+    font-family: "Lato-Regular", sans-serif;
     font-size: 12px;
     font-weight: 300;
-    line-height: 1.85em;
+    line-height: 1.8em;
     text-align: justify;
     color: #767e9e;
     max-width: 220px;
@@ -379,19 +378,18 @@
   border-bottom: 6px solid #323746;
   padding: 39px 40px 30px 40px; }
   .portfolio__header {
+    font-family: "Lato-Black", sans-serif;
     font-weight: 900;
     color: #666d89;
     margin-top: 21px;
     margin-bottom: 19px;
-    font-size: 30px;
-    letter-spacing: 0.01em; }
+    font-size: 30px; }
   .portfolio__descr {
+    font-family: "Lato-Light", sans-serif;
     font-weight: 300;
     color: #767e9e;
     font-size: 18px;
     line-height: 1.7em;
-    letter-spacing: -0.02em;
-    word-spacing: 0.06em;
     text-align: justify; }
   .portfolio__content {
     display: -webkit-box;
@@ -522,18 +520,18 @@
   border-bottom: 6px solid #fff;
   padding: 40px 40px 30px 40px; }
   .about__header {
+    font-family: "Lato-Black", sans-serif;
     font-weight: 900;
     color: #666d89;
     margin-top: 20px;
     margin-bottom: 19px;
     font-size: 30px; }
   .about__descr {
+    font-family: "Lato-Light", sans-serif;
     font-weight: 300;
     color: #767e9e;
     font-size: 18px;
     line-height: 1.7em;
-    letter-spacing: -0.02em;
-    word-spacing: 0.06em;
     text-align: justify; }
   .about__content {
     display: -webkit-box;
@@ -556,6 +554,7 @@
   width: 300px;
   margin-bottom: 32px; }
   .card__header {
+    font-family: "Lato-Black", sans-serif;
     font-size: 18px;
     font-weight: 900;
     color: #666d89;
@@ -564,21 +563,26 @@
     white-space: nowrap;
     overflow: hidden;
     -o-text-overflow: ellipsis;
-       text-overflow: ellipsis; }
+       text-overflow: ellipsis;
+    letter-spacing: -0.005em; }
   .card__descr {
+    font-family: "Lato-Regular", sans-serif;
     font-size: 12px;
     font-weight: 400;
     color: #767e9e;
     line-height: 1.8em;
-    word-spacing: -0.028em;
     margin-top: 9px;
     margin-bottom: 23px;
     text-align: justify; }
   .card:nth-child(1) .card__descr {
     letter-spacing: -0.01em;
-    word-spacing: -0.028em; }
+    word-spacing: 0.039em; }
   .card:nth-child(2) {
     margin: 0 21px 32px 19px; }
+    .card:nth-child(2) .card__descr {
+      word-spacing: -0.002em;
+      margin-left: 1px;
+      margin-right: -1px; }
   .card__photo {
     width: 300px;
     height: 300px; }
@@ -617,6 +621,7 @@
   padding: 40px 40px 3px 40px;
   min-height: 578px; }
   .feedback__header {
+    font-family: "Lato-Black", sans-serif;
     font-weight: 900;
     color: #f0d8d9;
     margin-top: 20px;
@@ -624,12 +629,11 @@
     font-size: 30px;
     word-spacing: -0.03em; }
   .feedback__descr {
+    font-family: "Lato-Light", sans-serif;
     font-weight: 300;
     color: #f0d8d9;
     font-size: 18px;
     line-height: 1.7em;
-    letter-spacing: -0.02em;
-    word-spacing: 0.06em;
     text-align: justify; }
   .feedback__content {
     display: -webkit-box;
@@ -725,12 +729,14 @@
 .contact {
   max-width: 300px; }
   .contact__header {
+    font-family: "Lato-Black", sans-serif;
     font-size: 18px;
     font-weight: 900;
     color: #f0d8d9;
-    letter-spacing: 0.005em;
+    letter-spacing: -0.005em;
     margin-top: -1px; }
   .contact__descr {
+    font-family: "Lato-Regular", sans-serif;
     color: #f0d8d9;
     font-size: 12px;
     font-weight: 400;
@@ -795,6 +801,7 @@
       -ms-flex-align: center;
           align-items: center; }
   .footer__copyright {
+    font-family: "Lato-Regular", sans-serif;
     color: #666d89;
     margin-top: -1px;
     margin-left: 42px;
