@@ -29,16 +29,43 @@
         <main class="main">
             <section class="slider">
                 <h2 class="slider__header">Slider</h2>
-                <div class="slider__slide">
+                <div class="slider__slide slider__slide--1 slider__slide--show">
 					<div class="iphone-vertical">
                         <div class="iphone-vertical__shadow"></div>
                         <div class="iphone-vertical__phone"></div>
-						<div class="iphone-vertical__screen"></div>
+                        <div class="iphone-vertical__camera"></div>
+                        <div class="iphone-vertical__screen"></div>
+                        <div class="iphone-vertical__button"></div>
 					</div>
 					<div class="iphone-horizontal">
                         <div class="iphone-horizontal__shadow"></div>
                         <div class="iphone-horizontal__phone"></div>
+                        <div class="iphone-horizontal__camera"></div>
                         <div class="iphone-horizontal__screen"></div>
+                        <div class="iphone-horizontal__button"></div>
+					</div>
+                </div>
+                <div class="slider__slide slider__slide--2">
+					<div class="iphone-vertical iphone-vertical--min-left">
+                        <div class="iphone-vertical__shadow"></div>
+                        <div class="iphone-vertical__phone"></div>
+                        <div class="iphone-vertical__camera"></div>
+                        <div class="iphone-vertical__screen"></div>
+                        <div class="iphone-vertical__button"></div>
+                    </div>
+                    <div class="iphone-vertical iphone-vertical--big-center">
+                        <div class="iphone-vertical__shadow"></div>
+                        <div class="iphone-vertical__phone"></div>
+                        <div class="iphone-vertical__camera"></div>
+                        <div class="iphone-vertical__screen"></div>
+                        <div class="iphone-vertical__button"></div>
+					</div>
+                    <div class="iphone-vertical iphone-vertical--min-right">
+                        <div class="iphone-vertical__shadow"></div>
+                        <div class="iphone-vertical__phone"></div>
+                        <div class="iphone-vertical__camera"></div>
+                        <div class="iphone-vertical__screen"></div>
+                        <div class="iphone-vertical__button"></div>
 					</div>
                 </div>
                 <div class="slider__buttons">
@@ -46,7 +73,7 @@
                     <div class="slider__button_right"><img src="assets/arrow-right.png" alt="right"></div>
                 </div>
             </section>
-            <a id="service"></a>
+            <a id="service" class="anchor"></a>
             <section class="services">
                 <h2 class="services__header">Our Services</h2>
                 <p class="services__descr">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -107,17 +134,17 @@
                     </div>
                 </div>
             </section>
-            <a id="portfolio"></a>
+            <a id="portfolio" class="anchor"></a>
             <section class="portfolio">
                 <h2 class="portfolio__header">Portfolio</h2>
                 <div class="portfolio__descr">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</div>
                 <div class="portfolio__content">
-					<div class="portfolio-buttons">
-						<a class="btn btn-portfolio" href="javascript:void(0);">All</a>
-						<a class="btn btn-portfolio" href="javascript:void(0);">Web Design</a>
-						<a class="btn btn-portfolio" href="javascript:void(0);">Graphic Design</a>
-						<a class="btn btn-portfolio" href="javascript:void(0);">Artwork</a>
-					</div>
+					<ul class="portfolio-buttons">
+						<li class="btn btn-portfolio">All</li>
+						<li class="btn btn-portfolio">Web Design</li>
+						<li class="btn btn-portfolio">Graphic Design</li>
+						<li class="btn btn-portfolio">Artwork</li>
+                    </ul>
 					<div class="portfolio-projects">
 						<div class="btn btn-project btn-project--one"></div>
 						<div class="btn btn-project btn-project--two"></div>
@@ -134,7 +161,7 @@
 					</div>
 				</div>
             </section>
-            <a id="about"></a>
+            <a id="about" class="anchor"></a>
 			<section class="about">
                 <h2 class="about__header">About Us</h2>
                 <div class="about__descr">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</div>
@@ -174,7 +201,7 @@
 					</div>
 				</div>
             </section>
-            <a id="feedback"></a>
+            <a id="feedback" class="anchor"></a>
             <section class="feedback">
 				<h2 class="feedback__header">Get a Quote</h2>
                 <div class="feedback__descr">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</div>
