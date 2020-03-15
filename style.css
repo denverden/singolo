@@ -498,6 +498,8 @@ html {
     -webkit-transform: scale(1.05) rotate(3deg);
         -ms-transform: scale(1.05) rotate(3deg);
             transform: scale(1.05) rotate(3deg); }
+  .btn-project--active {
+    outline: 5px solid #F06C64; }
   .btn-project--one {
     background: url(assets/project1.jpg);
     background-position: -8px -11px; }
