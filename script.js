@@ -53,4 +53,25 @@ window.onload = function() {
         document.querySelector('.feedback-form').reset();
         event.target.parentElement.classList.remove('modal--show');
     });
+
+
+    document.querySelector('.slider__button_left').addEventListener('click', (event) => {
+        if(document.getElementById('slide-1').style.transform == 'translateX(-1020px)') {
+                document.getElementById('slide-1').style.transform = 'translateX(0px)';
+                document.getElementById('slide-2').style.transform = 'translateX(1020px)';
+            } else {
+                document.getElementById('slide-1').style.transform = 'translateX(-1020px)';
+                document.getElementById('slide-2').style.transform = 'translateX(0px)';
+            }
+    });
+
+    document.querySelector('.slider__button_right').addEventListener('click', (event) => {
+        if(document.getElementById('slide-1').style.transform == 'translateX(-1020px)') {
+            document.getElementById('slide-1').style.transform = 'translateX(0px)';
+            document.getElementById('slide-2').style.transform = 'translateX(1020px)';
+        } else {
+            document.getElementById('slide-1').style.transform = 'translateX(-1020px)';
+            document.getElementById('slide-2').style.transform = 'translateX(0px)';
+        }
+    });
 }
