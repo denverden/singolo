@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">    
 </head>
 <body class="page">
+    <div class="substrate"></div>
     <a id="home"></a>
     <div class="wrapper">
         <header class="header">
@@ -72,6 +73,7 @@
                     <div class="slider__button_left"><img src="assets/arrow-left.png" alt="left"></div>
                     <div class="slider__button_right"><img src="assets/arrow-right.png" alt="right"></div>
                 </div>
+                <div class="slider__bottom-line"></div>
             </section>
             <a id="service" class="anchor"></a>
             <section class="services">
@@ -206,11 +208,11 @@
 				<h2 class="feedback__header">Get a Quote</h2>
                 <div class="feedback__descr">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</div>
                 <div class="feedback__content">
-					<form class="feedback-form" target="/" method="get">
-						<input class="input feedback-form__name" type="text" name="name" id="name" placeholder="Name (Required)" required>
-						<input class="input feedback-form__email" type="email" name="email" id="email" placeholder="Email (Required)" required>
-						<input class="input feedback-form__subject" type="text" name="email" placeholder="Subject">
-                        <textarea class="input feedback-form__descr" name="descr" id="descr" placeholder="Describe your project in detail..."></textarea>
+                    <form class="feedback-form" target="/" method="get">
+						<input class="input feedback-form__name" type="text" name="name" id="name" placeholder="Name (Required)" maxlength="60" required>
+						<input class="input feedback-form__email" type="email" name="email" id="email" placeholder="Email (Required)" maxlength="60" required>
+						<input class="input feedback-form__subject" type="text" name="subject" maxlength="255" placeholder="Subject">
+                        <textarea class="input feedback-form__descr" name="descr" placeholder="Describe your project in detail..."></textarea>
                         <input class="feedback-form__button" type="submit" value="Send">
 					</form>
 					<div class="contact">
@@ -223,7 +225,7 @@
                         </div>
 					</div>
 				</div>
-			</section>
+            </section>
         </main>
         <footer class="footer">
             <div class="footer__copyright">&copy; Copyright 2013 &middot; by PSDchat.com</div>
@@ -237,6 +239,11 @@
             </div>
         </footer>
     </div>
+    <section class="modal">
+        <h2 class="modal__header">The letter was sent</h2>
+        <div class="modal__descrip">Subject: Singolo<br>Description: Portfolio project</div>
+        <div class="modal__button">OK</div>
+    </section>
     <script src="script.js"></script>
 </body>
 </html>

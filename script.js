@@ -28,12 +28,29 @@ window.onload = function() {
 
     PHONE_BUTTON.forEach(element =>
         element.addEventListener('click', (event) => {
-            event.target.parentElement.querySelector('.iphone-vertical__screen').classList.toggle("iphone-vertical__screen--no-active");
-            event.target.parentElement.querySelector('.iphone-vertical__camera').classList.toggle("iphone-vertical__camera--no-active");
+            event.target.parentElement.querySelector('.iphone-vertical__screen').classList.toggle('iphone-vertical__screen--no-active');
+            event.target.parentElement.querySelector('.iphone-vertical__camera').classList.toggle('iphone-vertical__camera--no-active');
         }));
 
-    document.querySelector(".iphone-horizontal__button").addEventListener("click", (event) => {
-        event.target.parentElement.querySelector('.iphone-horizontal__screen').classList.toggle("iphone-horizontal__screen--no-active");
-        event.target.parentElement.querySelector('.iphone-horizontal__camera').classList.toggle("iphone-horizontal__camera--no-active");
+    document.querySelector('.iphone-horizontal__button').addEventListener('click', (event) => {
+        event.target.parentElement.querySelector('.iphone-horizontal__screen').classList.toggle('iphone-horizontal__screen--no-active');
+        event.target.parentElement.querySelector('.iphone-horizontal__camera').classList.toggle('iphone-horizontal__camera--no-active');
+    });
+
+    document.querySelector('.feedback-form').addEventListener('submit', (event) => {
+        event.preventDefault();
+        if(document.querySelector('.feedback-form').checkValidity()) {
+            document.querySelector('.substrate').classList.add('substrate--show');
+            let subject = document.querySelector('.feedback-form').subject.value ? '<b>Subject:</b> ' + document.querySelector('.feedback-form').subject.value : 'Without subject';
+            let description = document.querySelector('.feedback-form').descr.value ? '<br><b>Description:</b> ' + document.querySelector('.feedback-form').descr.value : '<br>Without description';
+            document.querySelector('.modal__descrip').innerHTML = subject + description;
+            document.querySelector('.modal').classList.add('modal--show');
+        }
+    });
+
+    document.querySelector('.modal__button').addEventListener('click', (event) => {
+        document.querySelector('.substrate').classList.remove('substrate--show');
+        document.querySelector('.feedback-form').reset();
+        event.target.parentElement.classList.remove('modal--show');
     });
 }
