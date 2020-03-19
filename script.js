@@ -16,7 +16,8 @@ window.onload = function() {
             BUTTON_PORTFOLIO.querySelectorAll('.btn-portfolio').forEach(element => element.classList.remove('btn-portfolio--active'));
             if(event.target.className !== 'portfolio-buttons') {
                 event.target.classList.add('btn-portfolio--active');
-                BUTTON_PROJECT.querySelectorAll('.btn-project').forEach(element => element.style.order = Math.floor(Math.random() * 11));    
+                pictureArray = [...BUTTON_PROJECT.querySelectorAll('.btn-project')].sort(() => Math.random() - 0.5);
+                pictureArray.forEach(element => BUTTON_PROJECT.append(element));
             }
         }
     });
