@@ -57,26 +57,34 @@ window.onload = function() {
         event.target.parentElement.classList.remove('modal--show');
     });
 
+    let counter = 1;
+    document.querySelector('.slider__overflow').append(document.querySelector('.slider__slide:first-child').cloneNode(true));
+    document.querySelector('.slider__overflow').prepend(document.querySelector('.slider__slide:nth-last-child(2)').cloneNode(true));
+    const SLIDE_ITEMS = document.querySelectorAll('.slider__slide');
 
     document.querySelector('.slider__button_left').addEventListener('click', (event) => {
-        if(document.getElementById('slide-1').style.transform == 'translateX(-1020px)') {
-                document.getElementById('slide-1').style.transform = 'translateX(0px)';
-                document.getElementById('slide-2').style.transform = 'translateX(1020px)';
-            } else {
-                document.getElementById('slide-1').style.transform = 'translateX(-1020px)';
-                document.getElementById('slide-2').style.transform = 'translateX(0px)';
-            }
+        if (counter >= 1) counter--;
+        SLIDE_ITEMS.forEach(element => {
+            element.style.transition = 'transform 0.5s';
+            element.style.transform = `translateX(${-1*counter*100}%)`;
+        });
     });
 
     document.querySelector('.slider__button_right').addEventListener('click', (event) => {
-        if(document.getElementById('slide-1').style.transform == 'translateX(-1020px)') {
-            document.getElementById('slide-1').style.transform = 'translateX(0px)';
-            document.getElementById('slide-2').style.transform = 'translateX(1020px)';
-        } else {
-            document.getElementById('slide-1').style.transform = 'translateX(-1020px)';
-            document.getElementById('slide-2').style.transform = 'translateX(0px)';
-        }
+        if (counter < SLIDE_ITEMS.length - 1) counter++;
+        SLIDE_ITEMS.forEach(element => {
+            element.style.transition = 'transform 0.5s';
+            element.style.transform = `translateX(${-1*counter*100}%)`;
+        });
     });
+
+    SLIDE_ITEMS.forEach(element =>
+        element.addEventListener('transitionend', () => {
+        if(counter == SLIDE_ITEMS.length - 1) counter = 1;
+        if(counter == 0) counter = SLIDE_ITEMS.length - 2;
+        SLIDE_ITEMS.forEach(element => element.style.transition = 'none');
+        SLIDE_ITEMS.forEach(element => element.style.transform = `translateX(${-1*counter*100}%)`);
+    }));
 
     document.addEventListener('scroll', onScroll);
 
