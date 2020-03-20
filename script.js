@@ -4,6 +4,8 @@ window.onload = function() {
     const BUTTON_PROJECT = document.querySelector('.portfolio-projects');
     const PHONE_BUTTON = document.querySelectorAll(".iphone-vertical__button");
 
+    onScroll();
+
     MENU.addEventListener('click', (event) => {
         if(event.target.className == 'menu__link') {
             MENU.querySelectorAll('.menu__link').forEach(element => element.classList.remove('menu__link--active'));
@@ -75,4 +77,33 @@ window.onload = function() {
             document.getElementById('slide-2').style.transform = 'translateX(0px)';
         }
     });
+
+    document.addEventListener('scroll', onScroll);
+
+    function onScroll(event) {
+        const cursorPos = window.scrollY;
+        const ANCHOR = document.querySelectorAll('.anchor');
+        const scrollHeight = Math.max(
+            document.body.scrollHeight, document.documentElement.scrollHeight,
+            document.body.offsetHeight, document.documentElement.offsetHeight,
+            document.body.clientHeight, document.documentElement.clientHeight
+        );
+
+        ANCHOR.forEach((el) => {
+            if(el.offsetTop <= cursorPos + 95) {
+                MENU.querySelectorAll('.menu__link').forEach((a) => {
+                    a.classList.remove('menu__link--active');
+                    if(el.getAttribute('id') === a.getAttribute('href').substring(1)) {
+                        a.classList.add('menu__link--active');
+                    }
+                });
+            } 
+        });
+        if((scrollHeight === (cursorPos + window.innerHeight + 95))) {
+            MENU.querySelectorAll('.menu__link').forEach((element, idx, arr) => {
+                if(idx !== arr.length - 1) element.classList.remove('menu__link--active');
+                    else element.classList.add('menu__link--active');
+            });
+        }
+    }
 }
