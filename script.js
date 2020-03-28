@@ -3,13 +3,23 @@ window.onload = function() {
     const BUTTON_PORTFOLIO = document.querySelector('.portfolio-buttons');
     const BUTTON_PROJECT = document.querySelector('.portfolio-projects');
     const PHONE_BUTTON = document.querySelectorAll(".iphone-vertical__button");
+    const BTN_MENU = document.querySelector('.btn-menu');
 
     onScroll();
+
+    BTN_MENU.addEventListener('click', (event) => {
+        document.querySelector('.btn-menu').classList.toggle('btn-menu--open');
+        document.querySelector('.menu').classList.toggle('menu--open');
+        document.querySelector('.logo').classList.toggle('logo--open');
+    });
 
     MENU.addEventListener('click', (event) => {
         if(event.target.className == 'menu__link') {
             MENU.querySelectorAll('.menu__link').forEach(element => element.classList.remove('menu__link--active'));
             event.target.classList.add('menu__link--active');
+            document.querySelector('.btn-menu').classList.remove('btn-menu--open');
+            document.querySelector('.menu').classList.remove('menu--open');
+            document.querySelector('.logo').classList.remove('logo--open');
         }
     });
 
