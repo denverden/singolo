@@ -769,9 +769,13 @@ html {
         -ms-flex-wrap: wrap;
             flex-wrap: wrap; }
 
-@media (max-width: 480px) {
+@media (min-width: 768px) and (max-width: 1019px) {
+  .portfolio__descr {
+    margin-right: 50px; } }
+
+@media (max-width: 767px) {
   .portfolio {
-    padding: 5px 20px; } }
+    padding: 22px 30px 32px 30px; } }
 
 .portfolio-buttons {
   margin-top: 11px;
@@ -782,6 +786,14 @@ html {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none; }
+
+@media (min-width: 768px) and (max-width: 1019px) {
+  .portfolio-buttons {
+    margin-bottom: 24px; } }
+
+@media (max-width: 767px) {
+  .portfolio-buttons {
+    margin: 16px 0px 24px 0px; } }
 
 .portfolio-projects {
   display: -webkit-box;
@@ -795,6 +807,10 @@ html {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
   margin: -10px -10px 27px -10px; }
+
+@media (max-width: 767px) {
+  .portfolio-projects {
+    margin: -10px -6px 0px -6px; } }
 
 .btn-portfolio {
   font-family: "Lato-Regular", sans-serif;
@@ -822,14 +838,19 @@ html {
 .btn-project {
   display: block;
   width: 220px;
-  height: 187px;
+  min-width: 80px;
+  height: auto;
   background-color: #464b5e;
   margin: 10px;
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
   -o-transition: transform 0.3s;
   transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s; }
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 20%;
+      -ms-flex: 1 1 20%;
+          flex: 1 1 20%; }
   .btn-project:nth-child(n+13) {
     display: none; }
   .btn-project:hover {
@@ -838,42 +859,23 @@ html {
             transform: scale(1.05) rotate(3deg); }
   .btn-project--active {
     outline: 5px solid #F06C64; }
-  .btn-project--one {
-    background: url(assets/project1.jpg);
-    background-position: -8px -11px; }
-  .btn-project--two {
-    background: url(assets/project2.jpg);
-    background-position: -82px -43px; }
-  .btn-project--three {
-    background: url(assets/project3.jpg);
-    background-position: -11px -1px; }
-  .btn-project--four {
-    background: url(assets/project4.jpg);
-    background-position: -24px -2px; }
-  .btn-project--five {
-    background: url(assets/project5.jpg);
-    background-position: -10px -16px; }
-  .btn-project--six {
-    background: url(assets/project6.jpg);
-    background-position: -16px -4px; }
-  .btn-project--seven {
-    background: url(assets/project7.jpg);
-    background-position: -31px -39px; }
-  .btn-project--eight {
-    background: url(assets/project8.jpg);
-    background-position: -24px -32px; }
-  .btn-project--nine {
-    background: url(assets/project9.jpg);
-    background-position: -16px -2px; }
-  .btn-project--ten {
-    background: url(assets/project10.jpg);
-    background-position: -141px -113px; }
-  .btn-project--eleven {
-    background: url(assets/project11.jpg);
-    background-position: -144px -175px; }
-  .btn-project--twelve {
-    background: url(assets/project12.jpg);
-    background-position: -36px -60px; }
+
+@media (min-width: 768px) and (max-width: 1019px) {
+  .btn-project {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 25%;
+        -ms-flex: 1 1 25%;
+            flex: 1 1 25%; } }
+
+@media (max-width: 767px) {
+  .btn-project {
+    margin: 6px;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 35%;
+        -ms-flex: 1 1 35%;
+            flex: 1 1 35%; }
+    .btn-project:nth-child(n+9) {
+      display: none; } }
 
 .social-media__button {
   display: inline-block;
